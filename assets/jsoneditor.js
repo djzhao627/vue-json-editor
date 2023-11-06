@@ -9047,6 +9047,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // create menu
 	  this.menu = document.createElement('div');
 	  this.menu.className = 'jsoneditor-menu';
+
 	  this.frame.appendChild(this.menu);
 
 	  // create expand all button
@@ -15836,6 +15837,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  box.type = 'button';
 	  box.className = 'jsoneditor-modes jsoneditor-separator';
 	  box.innerHTML = currentTitle + ' &#x25BE;';
+	  box.style.background = '#3178f9';
 	  box.title = 'Switch editor mode';
 	  box.onclick = function () {
 	    var menu = new ContextMenu(items);
@@ -15985,7 +15987,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  buttonFormat.type = 'button';
 	  buttonFormat.className = 'jsoneditor-format';
 	  buttonFormat.title = 'Format JSON data, with proper indentation and line feeds (Ctrl+\\)';
-	  this.menu.appendChild(buttonFormat);
+	  // this.menu.appendChild(buttonFormat);
 	  buttonFormat.onclick = function () {
 	    try {
 	      me.format();
@@ -16001,7 +16003,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  buttonCompact.type = 'button';
 	  buttonCompact.className = 'jsoneditor-compact';
 	  buttonCompact.title = 'Compact JSON data, remove all whitespaces (Ctrl+Shift+\\)';
-	  this.menu.appendChild(buttonCompact);
+	  // this.menu.appendChild(buttonCompact);
 	  buttonCompact.onclick = function () {
 	    try {
 	      me.compact();
@@ -16061,7 +16063,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    var poweredBy = document.createElement('a');
-	    poweredBy.appendChild(document.createTextNode('powered by ace'));
+	    poweredBy.appendChild(document.createTextNode('powered by djzhao'));
 	    poweredBy.href = 'http://ace.ajax.org';
 	    poweredBy.target = '_blank';
 	    poweredBy.className = 'jsoneditor-poweredBy';
@@ -16071,7 +16073,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // for now, but this should be fixed.
 	      window.open(poweredBy.href, poweredBy.target);
 	    };
-	    this.menu.appendChild(poweredBy);
+	    // this.menu.appendChild(poweredBy);
 
 	    // register onchange event
 	    aceEditor.on('change', this._onChange.bind(this));

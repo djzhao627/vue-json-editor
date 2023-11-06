@@ -88,7 +88,7 @@ a.jsoneditor-value.jsoneditor-url {
 
 a.jsoneditor-value.jsoneditor-url:hover,
 a.jsoneditor-value.jsoneditor-url:focus {
-  color: #ee422e;
+  color: #3178f9;
 }
 
 div.jsoneditor td.jsoneditor-separator {
@@ -130,7 +130,7 @@ div.jsoneditor-value.jsoneditor-array {
 }
 
 div.jsoneditor-value.jsoneditor-number {
-  color: #ee422e;
+  color: #3178f9;
 }
 
 div.jsoneditor-value.jsoneditor-boolean {
@@ -656,7 +656,7 @@ div.jsoneditor-contextmenu ul li button.jsoneditor-selected,
 div.jsoneditor-contextmenu ul li button.jsoneditor-selected:hover,
 div.jsoneditor-contextmenu ul li button.jsoneditor-selected:focus {
   color: white;
-  background-color: #ee422e;
+  background-color: #3178f9;
 }
 
 div.jsoneditor-contextmenu ul li {

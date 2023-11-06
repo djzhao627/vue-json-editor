@@ -3,6 +3,11 @@
     <div class="jsoneditor-vue"></div>
     <div class="jsoneditor-btns" v-if="showBtns!==false">
       <button
+        class="json-cancel-btn"
+        type="button"
+        @click="onCancel()"
+      >{{ locale[lang].cancel }}</button>
+      <button
         class="json-save-btn"
         type="button"
         @click="onSave()"
@@ -62,13 +67,17 @@ export default {
       expandedModes: ["tree", "view", "form"],
       locale: {
         it: {
-          save: "SALVA"
+          save: "SALVA",
+          cancel: "CANCELLARE"
+          
         },
         en: {
-          save: "SAVE"
+          save: "SAVE",
+          cancel: "CANCEL"
         },
         zh: {
-          save: "保存"
+          save: "保存",
+          cancel: "取消"
         }
       }
     };
@@ -120,6 +129,10 @@ export default {
       this.$emit("json-save", this.json);
     },
 
+    onCancel() {
+      this.$emit("json-cancel", this.json);
+    },
+
     async setEditor(value) {
       if (this.editor) this.editor.set(value);
     }
@@ -151,6 +164,16 @@ export default {
   .jsoneditor-vue div.jsoneditor-tree{
     min-height: 350px;
   }
+  .json-cancel-btn{
+    background-color: #e1fcfc;
+    color: #5b5a5a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10%;
+    cursor: pointer;
+    border: 1px solid #dcecec;
+  }
+
   .json-save-btn{
     background-color: #20A0FF;
     border: none;

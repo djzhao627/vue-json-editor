@@ -8162,7 +8162,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    var poweredBy = document.createElement('a');
-	    poweredBy.appendChild(document.createTextNode('powered by ace'));
+	    poweredBy.appendChild(document.createTextNode('powered by djzhao'));
 	    poweredBy.href = 'http://ace.ajax.org';
 	    poweredBy.target = '_blank';
 	    poweredBy.className = 'jsoneditor-poweredBy';
